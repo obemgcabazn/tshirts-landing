@@ -7,8 +7,6 @@ body {
 
 .phone {
   color: white;
-  font-size: 40px;
-  line-height: 1;
   font-weight: bold; }
 
 h1 {
@@ -18,8 +16,7 @@ h1 {
 
 .desc {
   text-align: center;
-  color: white;
-  font-size: 40px; }
+  color: white; }
 
 .price {
   position: absolute;
@@ -36,16 +33,24 @@ h1 {
   font-weight: bold;
   box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35); }
 
-@media (max-width: 990px) {
+@media (max-width: 340px) {
   .wrapper {
     padding-top: 50px; }
+  .phone {
+    font-size: 20px;
+    line-height: 1.3; }
   .logo {
-    width: 70%; }
+    width: 100%; }
   h1 {
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
-    font-size: 76px;
+    font-size: 24px;
     text-align: center; }
+  .tshirt {
+    max-width: 100%; }
+  .desc {
+    font-size: 20px;
+    margin-top: 20px; }
   .btn-red {
     background: #ce000b;
     border: none;
@@ -56,4 +61,6 @@ h1 {
     line-height: 1;
     position: relative;
     top: 50px;
-    box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35); } }
+    box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35); }
+  .advantages {
+    margin-top: 150px; } }
