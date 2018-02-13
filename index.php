@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
   <?php
-  $title = $_GET['utm_content'];
+
+  $title = 'katfish';
+  if(isset($_GET['utm_content'])){$title = $_GET['utm_content'];}
 
   $title_text = "с любым принтом";
 

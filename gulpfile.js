@@ -1,5 +1,6 @@
 var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
+    concat        = require('gulp-concat'),
     livereload    = require('gulp-livereload');
 
 
@@ -15,7 +16,8 @@ gulp.task('watch', function(){
 gulp.task('sass', function () {
   return gulp.src( '**/*.sass' )
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest( '.' ));
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest( './' ));
 });
 
 gulp.task( 'default', gulp.series('sass', 'watch') );
