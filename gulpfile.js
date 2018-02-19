@@ -6,18 +6,17 @@ var gulp          = require('gulp'),
 
 gulp.task('watch', function(){
   livereload.listen();
-  gulp.watch( '**/*.php').on('change', livereload.changed);
-  // gulp.watch( '**/*.js').on('change', livereload.changed);
-  gulp.watch( '**/*.css').on('change', livereload.changed);
-  gulp.watch( '**/*.sass', gulp.series('sass'));
+  gulp.watch( '*.php').on('change', livereload.changed);
+  gulp.watch( 'css/*.css').on('change', livereload.changed);
+  gulp.watch( 'sass/*.sass', gulp.series('sass'));
 });
 
 
 gulp.task('sass', function () {
-  return gulp.src( '**/*.sass' )
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src( 'sass/*.sass' )
+    .pipe(sass())
     .pipe(concat('main.css'))
-    .pipe(gulp.dest( './' ));
+    .pipe(gulp.dest( './css/' ));
 });
 
-gulp.task( 'default', gulp.series('sass', 'watch') );
+gulp.task( 'default', gulp.series('watch') );
