@@ -92,7 +92,7 @@ section#advantages {
       width: 64px; }
 
 section#horizontal-offer .wrapper {
-  padding-bottom: 50px; }
+  padding: 10px 20px 50px; }
 
 section#horizontal-offer h2 {
   color: white;
@@ -104,7 +104,25 @@ section#horizontal-offer .btn-red {
   font-size: 18px;
   margin-top: 30px; }
 
+.modal .btn-red {
+  position: relative;
+  top: 0;
+  font-size: 16px;
+  padding: 10px 20px;
+  box-shadow: none; }
+  .modal .btn-red:hover {
+    background: #e00f1a; }
+
 @media (max-width: 340px) {
+  header {
+    margin-bottom: 20px; }
+  section#first-screen {
+    margin-bottom: 0; }
+    section#first-screen .btn-red {
+      font-size: 20px;
+      padding: 12px 58px;
+      top: 40px;
+      margin-top: 0; }
   .wrapper {
     padding-top: 50px; }
   .phone {
@@ -113,18 +131,28 @@ section#horizontal-offer .btn-red {
   .logo {
     width: 100%; }
   h1 {
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     font-size: 24px;
     text-align: center; }
   .tshirt {
     max-width: 100%; }
+  .price {
+    top: 100px;
+    width: 30vw;
+    height: 30vw;
+    font-size: 18px;
+    padding-top: 11vw; }
   .desc {
     font-size: 20px;
     margin-top: 20px; }
-  .btn-red {
-    font-size: 50px;
-    padding: 35px 180px;
-    top: 50px; }
   .advantages {
     margin-top: 150px; } }
+
+@media (min-width: 341px) and (max-width: 479px) {
+  .price {
+    width: 40vw;
+    height: 40vw;
+    padding-top: 13vw;
+    font-size: 8vw;
+    top: 120px; } }
